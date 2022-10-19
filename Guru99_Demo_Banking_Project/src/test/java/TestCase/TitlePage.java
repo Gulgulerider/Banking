@@ -117,7 +117,7 @@ public class TitlePage extends TestBase
 
 		po.GenderMale();
 
-	//	po.DOB();			Not performed action required
+		po.DOB();		//	Not performed action required
 		
 		po.Address();
 		
