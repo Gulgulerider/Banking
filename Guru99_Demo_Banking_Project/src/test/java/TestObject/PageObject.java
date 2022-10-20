@@ -131,15 +131,15 @@ public class PageObject
 		
 		DOB.sendKeys("10121991");
 		
-//		Thread.sleep(3000);
+//		
 //		
 //		DOB.sendKeys("12");
 ////		
-//		Thread.sleep(3000);
+//		
 //		
 //		DOB.sendKeys("1991");
 //		
-//		Thread.sleep(3000);
+//		
 		
 	}
 	
@@ -236,7 +236,7 @@ public class PageObject
 		
 		File source = ts.getScreenshotAs(OutputType.FILE);
 		
-		File targate = new File("./ScreenShots/New_Customer.png");
+		File targate = new File("./ScreenShots/Male_Customer.png");
 		
 		FileHandler.copy(source, targate);
 	}
