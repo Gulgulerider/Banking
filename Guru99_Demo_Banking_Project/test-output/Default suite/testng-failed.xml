@@ -5,9 +5,9 @@
     <classes>
       <class name="TestCase.TitlePage">
         <methods>
-          <include name="AddNewCustomerMale_03"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="AddNewCustomerFemale_04"/>
         </methods>
       </class> <!-- TestCase.TitlePage -->
     </classes>

@@ -117,8 +117,10 @@ public class TitlePage extends TestBase
 
 		po.GenderMale();
 
-		po.DOB();		//	Not performed action required
+		po.DOB();	
 		
+		po.DOBYEAR();
+	
 		po.Address();
 		
 		po.city();
@@ -132,14 +134,19 @@ public class TitlePage extends TestBase
 		po.Email();
 		
 		po.PasswordNewCustomer();
+			
+		po.SubmitBtnForNewCustomer();
+		
+		Thread.sleep(2000);
 		
 		po.Screenshot();
 		
-		po.SubmitBtnForNewCustomer();
+		String title1 = driver.getTitle();
+		System.out.println(title1);
 		
-		Thread.sleep(5000);
+		po.ClickOnContinueBtn();
 		
-	
+		driver.switchTo().window(s).navigate().refresh();
 
 	}
 	
@@ -168,7 +175,9 @@ public class TitlePage extends TestBase
 		
 		po.GenderFemale();
 		
-//		po.DOB1();
+		po.DOB10();
+		
+		po.DOBYEAR10();
 		
 		po.Address1();
 		
@@ -184,11 +193,18 @@ public class TitlePage extends TestBase
 		
 		po.PasswordNewCustomer1();
 		
-		po.Screenshot();
-		
 		po.SubmitBtnForNewCustomer();
 		
-		Thread.sleep(5000);
+		Thread.sleep(2000);
+		
+		po.Screenshot1();
+		
+		String title1 = driver.getTitle();
+		System.out.println(title1);
+		
+		po.ClickOnContinueBtn();
+		
+		driver.switchTo().window(s).navigate().refresh();
 		
 
 	}

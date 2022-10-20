@@ -3,13 +3,16 @@ package TestObject;
 import java.io.File;
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class PageObject 
 {
@@ -122,28 +125,27 @@ public class PageObject
 	}
 	
 	
-	@FindBy(id = "dob")
+	@FindBy(xpath = "/html/body/table/tbody/tr/td/table/tbody/tr[6]/td[1]")
 	WebElement DOB;
 	
 	public void DOB() throws InterruptedException
 	{
-		DOB.click();
+		Actions act = new Actions(driver);
 		
-		DOB.sendKeys("10121991");
+		act.moveToElement(DOB).moveByOffset(100, 0).click().sendKeys("10").build().perform();
 		
-//		
-//		
-//		DOB.sendKeys("12");
-////		
-//		
-//		
-//		DOB.sendKeys("1991");
-//		
-//		
-		
+		act.moveToElement(DOB).moveByOffset(110, 0).click().sendKeys("12").build().perform();	
+	
 	}
 	
-
+	@FindBy(id= "dob")
+	WebElement DOBYEAR;
+	
+	public void DOBYEAR()
+	{
+		DOBYEAR.click();
+		DOBYEAR.sendKeys("1991");
+	}
 	
 	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[7]/td[2]/textarea")
 	WebElement Address;
@@ -236,9 +238,18 @@ public class PageObject
 		
 		File source = ts.getScreenshotAs(OutputType.FILE);
 		
-		File targate = new File("./ScreenShots/Male_Customer.png");
+		File targate = new File("./Screenshots/Amol_Customer.png");
 		
 		FileHandler.copy(source, targate);
+	}
+	
+	@FindBy(xpath= "//*[@id=\"customer\"]/tbody/tr[14]/td/a")
+	WebElement Continue;
+	
+	public void ClickOnContinueBtn()
+	{
+		Continue.click();
+
 	}
 	
 	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[5]/td[2]/input[2]")
@@ -251,16 +262,28 @@ public class PageObject
 		
 	}
 	
-	@FindBy(id = "dob")
-	WebElement DOB1;
+	@FindBy(xpath = "/html/body/table/tbody/tr/td/table/tbody/tr[6]/td[1]")
+	WebElement DOB10;
 	
-	public void DOB1()
+	public void DOB10()
 	{
-		DOB1.click();
+		Actions act = new Actions(driver);
 		
-		DOB1.sendKeys("21");
+		act.moveToElement(DOB10).moveByOffset(100, 0).click().sendKeys("22").build().perform();
+		
+		act.moveToElement(DOB10).moveByOffset(110, 0).click().sendKeys("08").build().perform();	
 		
 	}
+	
+	@FindBy(id= "dob")
+	WebElement DOBYEAR10;
+	
+	public void DOBYEAR10()
+	{
+		DOBYEAR10.click();
+		DOBYEAR10.sendKeys("1997");
+	}
+	
 	
 	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[7]/td[2]/textarea")
 	WebElement Address1;
@@ -312,7 +335,7 @@ public class PageObject
 	public void MobileNumber1()
 	{
 		MobileNumber1.click();
-		MobileNumber1.sendKeys("9109876543");
+		MobileNumber1.sendKeys("9975925906");
 
 	}
 	
@@ -336,25 +359,18 @@ public class PageObject
 
 	}
 	
+	public void Screenshot1() throws IOException
+	{
+		TakesScreenshot ts = (TakesScreenshot)driver;
+		
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		
+		File targate = new File("./Screenshots/Simona_Customer.png");
+		
+		FileHandler.copy(source, targate);
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 	
