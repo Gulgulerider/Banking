@@ -3,7 +3,6 @@ package TestObject;
 import java.io.File;
 import java.io.IOException;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
+import org.openqa.selenium.support.ui.Select;
 
 public class PageObject 
 {
@@ -24,6 +23,65 @@ public class PageObject
 		PageFactory.initElements(driver, this);
 	}
 	
+	@FindBy(xpath="/html/body/div[1]/div[1]/div[1]/div[1]")
+	WebElement Logo;
+	
+	public boolean Logo()
+	{
+		return Logo.isDisplayed();
+	}
+	
+	@FindBy(xpath="/html/body/div[1]/div[1]/div[2]/table/tbody/tr/td[1]")
+	WebElement Testing;
+	
+	public boolean TestingIcon()
+	{
+		return Testing.isDisplayed();
+	}
+	
+	public void Testing()
+	{
+		Testing.click();	
+	}
+	
+	@FindBy(xpath="/html/body/div[1]/div[1]/div[2]/table/tbody/tr/td[2]")
+	WebElement Selenium;
+	
+	public boolean SeleniumIcon()
+	{
+		return Selenium.isDisplayed();
+	}
+	
+	public void Selenium()
+	{
+		Selenium.click();	
+	}
+	
+	@FindBy(xpath="/html/body/div[1]/div[1]/div[2]/table/tbody/tr/td[3]")
+	WebElement LiveProject;
+	
+	public boolean LiveProjectIcon()
+	{
+		return LiveProject.isDisplayed();
+	}
+	
+	public void LiveProject()
+	{
+		LiveProject.click();	
+	}
+	
+	@FindBy(xpath="/html/body/div[1]/div[1]/div[2]/table/tbody/tr/td[4]")
+	WebElement Java;
+	
+	public boolean JavaIcon()
+	{
+		return Java.isDisplayed();
+	}
+	
+	public void Java()
+	{
+		Java.click();	
+	}
 	
 	
 	@FindBy(xpath="/html/body/form/table/tbody/tr[1]/td[2]/input")
@@ -159,7 +217,7 @@ public class PageObject
 		Address.click();
 		Address.sendKeys("Khed karjat");
 
-	}
+	}	
 	
 	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[8]/td[2]/input")
 	WebElement city;
@@ -230,7 +288,7 @@ public class PageObject
 		SubmitBtnForNewCustomer.click();
 		
 	}
-	
+
 
 	public void Screenshot() throws IOException
 	{
@@ -370,10 +428,107 @@ public class PageObject
 		FileHandler.copy(source, targate);
 	}
 	
+	@FindBy(xpath="/html/body/div[3]/div/ul/li[3]")
+	WebElement EditCustomer1;
+	
+	public void EditCustomer1()
+	{
+		EditCustomer1.click();		
+	}
+	
+	public boolean EditCustomerText1()
+	{
+		return EditCustomer1.isDisplayed();
+	}
+	
+	@FindBy(css="input[name=cusid]")
+	WebElement CustomerId;
+	
+	public void CustomerId()
+	{
+		CustomerId.click();
+		
+		CustomerId.sendKeys("59844");
+		
+	}
+	
+	@FindBy(xpath="/html/body/div[2]/table/tbody/tr/td/table/tbody/tr[11]/td[2]/input[1]")
+	WebElement EditCustomerSubmitBtn;
+	
+	
+	public void EditCustomerSubmitBtn()
+	{
+		EditCustomerSubmitBtn.click();
+	}
+	
+	
+	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[13]/td[2]/input[1]")
+	WebElement EditCustomerEntryPageSubmitBtn;
+	
+	public void EditCustomerEntryPageSubmitBtn()
+	{
+		EditCustomerEntryPageSubmitBtn.click();
+	}
+	
+	public void HandleAlertForEditCustomer()
+	{
+		driver.switchTo().alert().accept();
+	}
 
+	@FindBy(xpath="/html/body/div[3]/div/ul/li[5]")	
+	WebElement NewAccount1;
+	
+	public void NewAccount1()
+	{
+		NewAccount1.click();		
+	}
+	
+	public boolean NewAccountText1()
+	{
+		return NewAccount1.isDisplayed();
+	}
+	
+	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[3]/td[2]/select")
+	WebElement AccountType;
+	
+	public void AccountType()
+	{
+		AccountType.click();
+		
+		Select s = new Select(AccountType);
+		
+		s.selectByVisibleText("Savings");
+		
+		System.out.println(s.getOptions().size());
+		
+	}
+	
+	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[4]/td[2]/input")
+	WebElement InitialDeposite;
+	
+	public void InitialDeposite()
+	{
+		InitialDeposite.click();
+		InitialDeposite.sendKeys("555");
+	}
+	
+	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[5]/td[2]/input[1]")
+	WebElement SubmitNewAccount;
+	
+	public void SubmitNewAccount()
+	{
+		SubmitNewAccount.click();
+	}
+	
+	@FindBy(xpath="//*[@id=\"account\"]/tbody/tr[11]/td/a")
+	WebElement AccountContinue;
+	
+	public void AccountContinue()
+	{
+		AccountContinue.click();
+	}
 	
 	
 	
 	
-
 }

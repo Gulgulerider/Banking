@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-20T21:09:33 IST" name="Default suite" finished-at="2022-10-20T21:10:23 IST" duration-ms="49877">
+  <suite started-at="2022-10-22T20:22:50 IST" name="Default suite" finished-at="2022-10-22T20:23:33 IST" duration-ms="42437">
     <groups>
     </groups>
-    <test started-at="2022-10-20T21:09:33 IST" name="Default test" finished-at="2022-10-20T21:10:23 IST" duration-ms="49877">
-      <class name="TestCase.TitlePage">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:TestCase.TitlePage@659499f1]" started-at="2022-10-20T21:09:33 IST" name="setUp" finished-at="2022-10-20T21:09:56 IST" duration-ms="23196" status="PASS">
+    <test started-at="2022-10-22T20:22:50 IST" name="Default test" finished-at="2022-10-22T20:23:33 IST" duration-ms="42437">
+      <class name="TestCase.NewAccount">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:TestCase.NewAccount@1e1a0406]" started-at="2022-10-22T20:22:50 IST" name="setUp" finished-at="2022-10-22T20:23:05 IST" duration-ms="15280" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,15 +23,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="AddNewCustomerFemale_04()[pri:4, instance:TestCase.TitlePage@659499f1]" started-at="2022-10-20T21:09:56 IST" name="AddNewCustomerFemale_04" finished-at="2022-10-20T21:10:18 IST" duration-ms="21640" status="PASS">
+        <test-method signature="NewAccount1()[pri:1, instance:TestCase.NewAccount@1e1a0406]" started-at="2022-10-22T20:23:05 IST" name="NewAccount1" finished-at="2022-10-22T20:23:28 IST" duration-ms="22106" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddNewCustomerFemale_04 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCase.TitlePage@659499f1]" started-at="2022-10-20T21:10:18 IST" name="tearDown" finished-at="2022-10-20T21:10:23 IST" duration-ms="5003" status="PASS">
+        </test-method> <!-- NewAccount1 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCase.NewAccount@1e1a0406]" started-at="2022-10-22T20:23:28 IST" name="tearDown" finished-at="2022-10-22T20:23:33 IST" duration-ms="5015" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- TestCase.TitlePage -->
+      </class> <!-- TestCase.NewAccount -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
