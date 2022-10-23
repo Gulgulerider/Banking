@@ -89,13 +89,15 @@ public class NewAccount extends TestBase
 		
 		}
 		
+		po.BrockenLink();
+		
 		po.AccountContinue();
 		
 		driver.switchTo().window(s).navigate().refresh();
 		
 	}
 	
-	
+
 	
 	
 	
