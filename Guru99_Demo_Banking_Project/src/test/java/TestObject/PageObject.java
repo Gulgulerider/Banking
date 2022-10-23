@@ -26,6 +26,13 @@ public class PageObject
 		PageFactory.initElements(driver, this);
 	}
 	
+	public void title()
+	{
+		String title = driver.getTitle();
+		
+		System.out.println(title);
+	}
+	
 	@FindBy(xpath="/html/body/div[1]/div[1]/div[1]/div[1]")
 	WebElement Logo;
 	
@@ -336,7 +343,6 @@ public class PageObject
 		PasswordNewCustomer.sendKeys("123456");
 
 	}
-	
 
 	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[14]/td[2]/input[1]")
 	WebElement SubmitBtnForNewCustomer;
@@ -615,15 +621,46 @@ public class PageObject
 				System.out.println(url + " - " + " Is Valid Link");
 			}
 				
-		}
+		}	
+		
 	}
 	
+	@FindBy(xpath="/html/body/div[3]/div/ul/li[6]")
+	WebElement EditAccount;
 	
+	public void EditAccount()
+	{
+		EditAccount.click();
+	}
 	
+	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[6]/td[2]/input")
+	WebElement AccountNo;
 	
+	public void AccountNo()
+	{
+		AccountNo.click();
+		AccountNo.sendKeys("113060");
+	}
 	
+	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[11]/td[2]/input[1]")
+	WebElement EditAccountSubmitBtn;
 	
+	public void EditAccountSubmitBtn()
+	{
+		EditAccountSubmitBtn.click();
+	}
+
+	@FindBy(css="p.heading3[align=center]")
+	WebElement EditAccountForm;
 	
+	public boolean EditAccountForm()
+	{
+		String a = EditAccountForm.getText();
+		
+		System.out.println(a);
+		
+		return true;
+	}
 	
 	
 }

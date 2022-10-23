@@ -107,7 +107,7 @@ public class EditCustomer extends TestBase
 		po.HandleAlertForEditCustomer();
 		
 		
-		
+		driver.close();
 		
 	}
 	
