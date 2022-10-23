@@ -94,11 +94,13 @@ public class NewAccount extends TestBase
 		po.AccountContinue();
 		
 		driver.switchTo().window(s).navigate().refresh();
+
 		
+		driver.close();
 	}
 	
 
-	
+
 	
 	
 	
