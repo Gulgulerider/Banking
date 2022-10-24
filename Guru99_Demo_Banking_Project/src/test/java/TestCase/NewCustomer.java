@@ -153,51 +153,9 @@ public class NewCustomer extends TestBase
 		
 		driver.switchTo().window(s).navigate().refresh();
 		
+	driver.close();	
 
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 
 }

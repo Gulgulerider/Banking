@@ -43,6 +43,7 @@ public class EditAccount extends TestBase
 		po.title();
 		
 		
+		driver.close();
 	}
 
 }

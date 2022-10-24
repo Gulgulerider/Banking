@@ -349,8 +349,7 @@ public class PageObject
 	
 	public void SubmitBtnForNewCustomer()
 	{
-		SubmitBtnForNewCustomer.click();
-		
+		SubmitBtnForNewCustomer.click();		
 	}
 
 
@@ -661,6 +660,116 @@ public class PageObject
 		
 		return true;
 	}
+	
+	@FindBy(xpath="/html/body/div[3]/div/ul/li[4]")
+	WebElement DeleteCustomer;
+	
+	public void DeleteCustomer()
+	{
+		DeleteCustomer.click();
+	}
+	
+	public boolean DeleteCustomerText()
+	{
+		return DeleteCustomer.isDisplayed();
+	}
+	
+	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[2]/td[2]/input")
+	WebElement DeleteCustomerID;
+	
+	public void DeleteCustomerID()
+	{
+		DeleteCustomerID.click();
+		
+		DeleteCustomerID.sendKeys("74371");
+	}
+	
+	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[7]/td[2]/input[1]")
+	WebElement DeleteCustomerSubmitBtn;
+	
+	public void DeleteCustomerSubmitBtn()
+	{
+		DeleteCustomerSubmitBtn.click();
+	}
+	
+	public void HandleAlertForDeleteCustomer()
+	{
+		driver.switchTo().alert().accept();	//click on ok btn
+		
+	//	driver.switchTo().alert().dismiss();	//click on cancle btn
+	}
+	
+	@FindBy(xpath="/html/body/div[3]/div/ul/li[7]")
+	WebElement DeleteAccount;
+	
+	public void DeleteAccount()
+	{
+		DeleteAccount.click();
+	}
+	
+	public boolean DeleteAccountText()
+	{
+		return DeleteAccount.isDisplayed();
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }
