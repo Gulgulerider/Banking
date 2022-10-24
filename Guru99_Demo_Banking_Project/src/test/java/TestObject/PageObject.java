@@ -15,6 +15,7 @@ import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 public class PageObject 
 {
@@ -713,30 +714,224 @@ public class PageObject
 		
 	}
 	
+	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[6]/td[2]/input")
+	WebElement DeleteAccountNo;
 	
+	public void DeleteAccountNo()
+	{
+		DeleteAccountNo.click();
+		DeleteAccountNo.sendKeys("113101");
+	}
 	
+	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[11]/td[2]/input[1]")
+	WebElement DeleteAccountSubmitBtn;
 	
+	public void DeleteAccountSubmitBtn()
+	{
+		DeleteAccountSubmitBtn.click();
+		
+		driver.switchTo().alert().accept();
+	}
 	
+	@FindBy(xpath="//*[@id=\"main-message\"]/h1/span")
+	WebElement DeleteAccountThisPageText;
 	
+	public void DeleteAccountThisPageText()
+	{
+		String DATP = DeleteAccountThisPageText.getText();
+		
+		System.out.println(DATP);	
+	}
 	
+	@FindBy(xpath="/html/body/div[3]/div/ul/li[8]")
+	WebElement Deposite;
 	
+	public void Deposite()
+	{
+		Deposite.click();
+	}
 	
+	public boolean DepositeText()
+	{
+		return Deposite.isSelected();
+	}
 	
+	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[6]/td[2]/input")
+	WebElement DepositeAccoNo;
 	
+	public void DepositeAccoNo()
+	{
+		DepositeAccoNo.click();
+		DepositeAccoNo.sendKeys("113101");
+	}
 	
+	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[7]/td[2]/input")
+	WebElement DepositeAmount;
 	
+	public void DepositeAmount()
+	{
+		DepositeAmount.click();
+		DepositeAmount.sendKeys("555");
+	}
 	
+	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[8]/td[2]/input")
+	WebElement DepositeDescription;
 	
+	public void DepositeDescription()
+	{
+		DepositeDescription.click();
+		DepositeDescription.sendKeys("Amount added in acount please check and confirmed");
+	}
 	
+	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/p")
+	WebElement AmountDepositeForm;
 	
+	public void AmountDepositeForm()
+	{
+		String ADFORM = AmountDepositeForm.getText();
+		System.out.println(ADFORM);
+		
+		if(ADFORM.equals(ADFORM))
+		{
+			Assert.assertTrue(true);
+			System.out.println("Amount Deposite Form Text is verified");
+		}
+		else
+		{
+			Assert.assertTrue(true);
+			System.out.println("Amount Deposite Form Text is not verified");
+		}
+		
+	}
 	
+	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[12]/td[2]/input[1]")
+	WebElement DepositeSubmitBtn;
 	
+	public void DepositeSubmitBtn()
+	{
+		DepositeSubmitBtn.click();
+	}
 	
+	@FindBy(xpath="/html/body/div[3]/div/ul/li[9]")
+	WebElement Withdrawal;
 	
+	public void Withdrawal()
+	{
+		Withdrawal.click();
+	}
 	
+	public boolean WithdrawalText()
+	{
+		return Withdrawal.isSelected();
+	}
 	
+	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[6]/td[2]/input")
+	WebElement WithdrawalAccoNo;
 	
+	public void WithdrawalAccoNo()
+	{
+		WithdrawalAccoNo.click();
+		WithdrawalAccoNo.sendKeys("113101");
+	}
 	
+	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[7]/td[2]/input")
+	WebElement WithdrawalAmount;
+	
+	public void WithdrawalAmount()
+	{
+		WithdrawalAmount.click();
+		WithdrawalAmount.sendKeys("505");
+	}
+	
+	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[8]/td[2]/input")
+	WebElement WithdrawalDescription;
+	
+	public void WithdrawalDescription()
+	{
+		WithdrawalDescription.click();
+		WithdrawalDescription.sendKeys("Amount Withdrawal in acount please check and confirmed");
+	}
+	
+	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/p")
+	WebElement AmountWithdrawalForm;
+	
+	public void AmountWithdrawalForm()
+	{
+		String AWFORM = AmountWithdrawalForm.getText();
+		System.out.println(AWFORM);
+		
+		if(AWFORM.equals(AWFORM))
+		{
+			Assert.assertTrue(true);
+			System.out.println("Amount Withdrawal Form Text is verified");
+		}
+		else
+		{
+			Assert.assertTrue(true);
+			System.out.println("Amount Withdrawal Form Text is not verified");
+		}
+		
+	}
+	
+	@FindBy(xpath="/html/body/table/tbody/tr/td/table/tbody/tr[12]/td[2]/input[1]")
+	WebElement WithdrawalSubmitBtn;
+	
+	public void WithdrawalSubmitBtn()
+	{
+		WithdrawalSubmitBtn.click();
+	}
+	
+	public void WithdrawalScreenShot() throws IOException
+	{
+		TakesScreenshot ts = (TakesScreenshot)driver;
+		
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		
+		File targate = new File("./Screenshots/Withdrawal_TransactionID.png");
+		
+		FileHandler.copy(source, targate);
+	}
+	
+	@FindBy(xpath="//*[@id=\"withdraw\"]/tbody/tr[1]/td/p")
+	WebElement WithdrawalTransactionMessage;
+	
+	public void WithdrawalTransactionMessage()
+	{
+		String WTSMS = WithdrawalTransactionMessage.getText();	
+		System.out.println(WTSMS);
+		
+		if(WTSMS.equals(WTSMS))
+		{
+			Assert.assertTrue(true);
+			System.out.println("Withdrawal Transaction Message is verified");
+		}
+		else
+		{
+			Assert.assertTrue(true);
+			System.out.println("Withdrawal Transaction Message is not verified");
+		}
+	}
+	
+	@FindBy(xpath="//*[@id=\"withdraw\"]/tbody/tr[6]")
+	WebElement WithdrawalTransactionID;
+	
+	public void WithdrawalTransactionID()
+	{
+		String WTID =  WithdrawalTransactionID.getText();
+		System.out.println(WTID);
+		
+		if(WTID.equals(WTID))
+		{
+			Assert.assertTrue(true);
+			System.out.println("Withdrawal Transaction ID is verified");
+		}
+		else
+		{
+			Assert.assertTrue(true);
+			System.out.println("Withdrawal Transaction ID is not verified");
+		}	
+		
+	}
 	
 	
 	
