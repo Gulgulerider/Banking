@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-24T16:26:38 IST" name="Default suite" finished-at="2022-10-24T16:27:17 IST" duration-ms="38025">
+  <suite started-at="2022-10-25T00:28:03 IST" name="Default suite" finished-at="2022-10-25T00:29:10 IST" duration-ms="67903">
     <groups>
     </groups>
-    <test started-at="2022-10-24T16:26:38 IST" name="Default test" finished-at="2022-10-24T16:27:17 IST" duration-ms="38025">
-      <class name="TestCase.Withdrawal">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:TestCase.Withdrawal@1e1a0406]" started-at="2022-10-24T16:26:38 IST" name="setUp" finished-at="2022-10-24T16:26:53 IST" duration-ms="14750" status="PASS">
+    <test started-at="2022-10-25T00:28:03 IST" name="Default test" finished-at="2022-10-25T00:29:10 IST" duration-ms="67903">
+      <class name="TestCase.LogOut">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:TestCase.LogOut@1e1a0406]" started-at="2022-10-25T00:28:03 IST" name="setUp" finished-at="2022-10-25T00:28:36 IST" duration-ms="33892" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,15 +23,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Withdrawal_01()[pri:0, instance:TestCase.Withdrawal@1e1a0406]" started-at="2022-10-24T16:26:53 IST" name="Withdrawal_01" finished-at="2022-10-24T16:27:11 IST" duration-ms="18222" status="PASS">
+        <test-method signature="LogOut_01()[pri:0, instance:TestCase.LogOut@1e1a0406]" started-at="2022-10-25T00:28:36 IST" name="LogOut_01" finished-at="2022-10-25T00:29:05 IST" duration-ms="28954" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Withdrawal_01 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCase.Withdrawal@1e1a0406]" started-at="2022-10-24T16:27:11 IST" name="tearDown" finished-at="2022-10-24T16:27:16 IST" duration-ms="5002" status="PASS">
+        </test-method> <!-- LogOut_01 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCase.LogOut@1e1a0406]" started-at="2022-10-25T00:29:05 IST" name="tearDown" finished-at="2022-10-25T00:29:10 IST" duration-ms="5003" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- TestCase.Withdrawal -->
+      </class> <!-- TestCase.LogOut -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

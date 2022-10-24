@@ -12,46 +12,36 @@ import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TestBase 
-{
+public class TestBase {
 	public WebDriver driver;
-	
+
 	@BeforeTest
-	@Parameters({"brname","appUrl"})
-	
+	@Parameters({ "brname", "appUrl" })
+
 	public void setUp(@Optional("chrome") String browser,
-			@Optional("https://demo.guru99.com/v4/index.php") String url)
-	{
-		if(browser.equals("chrome"))
-		{
+			@Optional("https://demo.guru99.com/v4/index.php") String url) {
+		if (browser.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver= new ChromeDriver();
-		}
-		else if(browser.equals("firefox"))
-		{
+			driver = new ChromeDriver();
+		} else if (browser.equals("firefox")) {
 			WebDriverManager.firefoxdriver();
-			driver= new FirefoxDriver();
+			driver = new FirefoxDriver();
 		}
 		driver.manage().window().maximize();
 		driver.get(url);
-		
+
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 
 	@AfterMethod
-	public void tearDown()
-	{
-		 try
-			{
-				 Thread.sleep(5000);
-			 }
-			catch (InterruptedException  e)
-			{
-				e.printStackTrace();
-			}
-		 
-	//	 driver.quit();
+	public void tearDown() {
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		 driver.quit();
 	}
 
-	
 }
